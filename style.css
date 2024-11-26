@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.score-board {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.score {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.score p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.score span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.game-area {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.choices-display {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.choice-box h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.choice-display {
+  height: 120px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  transition: all 0.3s ease;
+}
+
+.result {
+  font-size: 1.5rem;
+  font-weight: bold;
+  height: 2rem;
+  margin-bottom: 2rem;
+}
+
+.result.win {
+  color: #4ade80;
+}
+
+.result.lose {
+  color: #f87171;
+}
+
+.result.draw {
+  color: #fbbf24;
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.choice-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.choice-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.choice-btn:active {
+  transform: translateY(0);
+}
+
+.choice-btn.selected {
+  box-shadow: 0 0 0 2px white;
+}
+
+.choice-btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.choice-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.reset-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.reset-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 600px) {
+  .choices-display {
+    grid-template-columns: 1fr;
+  }
+  
+  .choices {
+    grid-template-columns: 1fr;
+  }
+  
+  .choice-display {
+    height: 100px;
+  }
+}
